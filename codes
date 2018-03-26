@@ -1,0 +1,52 @@
+
+=============================
+#include <iostream>
+using namespace std;
+int main()
+{
+  cout << "Welcome to C++!" << endl;
+  return 0;
+}
+=============================
+using namespace std==>告訴編譯器使用 std 命名空間。
+命名空間(namespace)是 C++ 中一個相對新的概念
+
+=============================
+#include <iostream>
+//using namespace std;
+int main()
+{
+  std::cout << "Welcome to C++!" << std::endl;
+  return 0;
+}
+==============================
+
+#include <iostream>
+using namespace std;
+int main()
+{
+  cout << "Programming is fun!" << endl;
+  cout << "Fundamentals First" << endl;
+  cout << "Problem Driven" << endl;
+  return 0;
+}
+
+==============================
+#include <iostream>
+using namespace std;
+
+int main() {
+  double radius;
+  double area;
+
+  // Step 1: Read in radius
+  radius = 20;
+
+  // Step 2: Compute area
+  area = radius * radius * 3.14159;
+
+  // Step 3: Display the area
+  cout << "The area is ";
+  cout << area << endl;
+}
+==============================
