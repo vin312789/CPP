@@ -1,6 +1,8 @@
 
 
 1.輸出與輸入
+使用 cout 物件輸出資料到螢幕
+使用 cin 物件取得從鍵盤的輸入資料
 =============================
 #include <iostream>
 using namespace std;
@@ -32,7 +34,7 @@ int main()
   cout << "Problem Driven" << endl;
   return 0;
 }
-
+==============================
 使用 cout 物件輸出資料到螢幕
 使用 cin 物件取得從鍵盤的輸入資料
 ==============================
@@ -54,3 +56,124 @@ int main() {
   cout << area << endl;
 }
 ==============================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // Step 1: Read in radius
+  double radius;
+  cout << "Enter a radius: ";
+  cin >> radius;
+
+  // Step 2: Compute area
+  double area = radius * radius * 3.14159;
+
+  // Step 3: Display the area
+  cout << "The area is " << area << endl;
+
+  return 0;
+}
+==============================
+使用單一敘述讀取多個輸入值
+注意輸入的順序
+==============================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // Prompt the user to enter three numbers
+  double number1, number2, number3;
+  cout << "Enter three numbers: ";
+  cin >> number1 >> number2 >> number3;
+
+  // Compute average
+  double average = (number1 + number2 + number3) / 3;
+
+  // Display result
+  cout << "The average of " << number1 << " " << number2
+      << " " << number3 << " is " << average << endl;
+
+  return 0;
+}
+==============================
+各種類型的運算子
+==============================
+四則運算:+, -, *, / ,和 %(餘數運算子)
+遞增與遞減運算子++ --
+比較運算子
+==============================
+[小考]下列運算輸出值為何?
+1.cout << pow(3.0, 4) << endl; 
+2.cout << pow(9.0, 0.5) << endl; 
+3.cout << pow(3.5, 2) << endl; 
+4.cout << pow(3.5, -2) << endl; 
+==============================
+[範例程式]溫度轉換
+華氏溫度轉換成攝氏溫度
+華氏 = 攝氏*(9/5)+32
+攝氏 = (華氏-32)*5/9
+==============================
+整數溢位integer-overflow
+
+數值的儲存是有所限制位元數目。
+當指定一太大的值加以儲存時，將會引發溢位(overflow)。
+
+http://projects.webappsec.org/w/page/13246946/Integer%20Overflows
+An Integer Overflow is the condition that occurs when the result of an arithmetic operation, 
+such as multiplication or addition, exceeds the maximum size of the integer type used to store it. 
+
+https://stackoverflow.com/questions/2641285/what-is-an-integer-overflow-error
+http://projects.webappsec.org/w/page/13246946/Integer%20Overflows
+-------------------------------------------
+[範例程式說明]下列程式碼將會產生溢位的錯誤
+
+short value = 32767 + 1;
+
+short型態的最大值是 32767
+32768 超過他的範圍
+所以會引發溢位(overflow)
+-------------------------------------------
+[範例程式說明]
+http://phrack.org/issues/60/10.html#article
+
+/* ex2.c - an integer overflow */
+    #include <stdio.h>
+
+    int main(void){
+            unsigned int num = 0xffffffff;
+
+            printf("num is %d bits long\n", sizeof(num) * 8);
+            printf("num = 0x%x\n", num);
+            printf("num + 1 = 0x%x\n", num + 1);
+
+            return 0;
+    }
+    /* EOF */
+
+The output of this program looks like this:
+
+    nova:signed {4} ./ex2
+    num is 32 bits long
+    num = 0xffffffff
+    num + 1 = 0x0  <-------不對!
+    
+-------------------------------------------
+[作業][舉例說明Integer Underflows]
+Integer Underflows occur when the result of an arithmetic operation is 
+smaller than the minimum value of the destination integer type. 
+-------------------------------------------
+型態轉換
+靜態轉型(Implicit casting):  double d = 3; (type widening)
+強制轉型(explicit casting):  int i = (int)6.9; 
+     (Fraction part is truncated)
+
+==========================================
+選擇結構decision
+
+==========================================
+使用者輸入一個整數，並判斷該整數是奇數或偶數?
+使用者輸入一個整數，並判斷該整數是否為水仙花數?
+使用者輸入一個整數，並判斷該整數是否為質數?
+==========================================
