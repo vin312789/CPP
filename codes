@@ -3,6 +3,7 @@
 1.輸出與輸入
 使用 cout 物件輸出資料到螢幕
 使用 cin 物件取得從鍵盤的輸入資料
+c===console
 =============================
 #include <iostream>
 using namespace std;
