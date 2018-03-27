@@ -1,5 +1,13 @@
 # 我的學習筆記
 
+https://github.com/chihyang/CPP_Primer
+
+https://github.com/huangmingchuan/Cpp_Primer_Answers
+
+https://github.com/iZhangHui/CppPrimer
+
+https://github.com/NorthFacing/Cpp-Primer
+
 # 程式碼下載
 
 http://www.informit.com/store/c-plus-plus-primer-9780321714114
