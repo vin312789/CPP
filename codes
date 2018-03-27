@@ -13,6 +13,8 @@ int main()
   return 0;
 }
 =============================
+c vs c++ 有何差異?
+
 using namespace std==>告訴編譯器使用 std 命名空間。
 命名空間(namespace)是 C++ 中一個相對新的概念
 
