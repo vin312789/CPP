@@ -3,6 +3,8 @@
 
 鼓勵你完成完整程式來看看答案
 
+[ref1]C++從入門到精通（項目案例版）明日學院 著
+
 =========================================
 
 int a,b,c,d,e,f;
@@ -21,4 +23,81 @@ f = a/100;
 
 g = a%10;
 
+=========================================
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	double a=123.456789012345;
+	cout << a << endl;  
+	cout << setprecision(9) << a << endl;
+	cout << setprecision(6);
+	cout << setiosflags(ios::fixed); 
+	cout << setiosflags(ios::fixed) << setprecision(8) << a << endl;
+	cout << setiosflags(ios::scientific) << a << endl;
+	cout << setiosflags(ios::scientific) << setprecision(4) << a << endl; 
+  return 0;
+}
+
+//恢復預設格式(精度為6)
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+=========================================
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  char ch1,ch2;
+  ch1='a'; ch2='B';							
+  printf("ch1=%c,ch2=%c\n",ch1-32,ch2+32);		
+  printf("ch1+10=%d\n", ch1+10);
+  printf("ch1+10=%c\n", ch1+10);
+  printf("ch2+10=%d\n", ch2+10);
+  printf("ch2+10=%c\n", ch2+10);
+  return 0;
+}
+=========================================
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i=5,j=8,k=12,l=4,x1,x2;
+	x1=i>j&&k>l;
+	x2=!(i>j)&&k>l;
+	printf("%d,%d\n",x1,x2);
+  return 0;
+}
+=========================================
+Question:x1,x2的值為多少? why?
+=========================================
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a=0x40,b;
+	b=a<<1;
+	cout << b << endl;
+	return 0;
+}
+
+=========================================
+Question:b的值為多少? why?
 =========================================
