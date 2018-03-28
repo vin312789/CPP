@@ -5,11 +5,13 @@
 10 c++
 
 ====================================
+
 #include <stdio.h>
  
 int main()
 {
     /* 我的第一个 C 程序 */
+    
     printf("Hello, World! \n");
  
     return 0;
@@ -18,19 +20,29 @@ int main()
 ====================================
 
 public class HelloWorld {
+
     public static void main(String[] args) {
+    
         System.out.println("Hello World");
+        
     }
+    
 }
 
 ====================================
 
 #include <iostream>
+ 
 using namespace std;
+
 int main()
+
 {
+
     cout << "Hello, world!" << endl;
+    
     return 0;
+    
 }
 ====================================
 
