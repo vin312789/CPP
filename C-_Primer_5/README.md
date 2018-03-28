@@ -8,6 +8,8 @@ C++ Primer中文版 (第5版)是久負盛名的 C 經典教程，時隔多年之
 
 https://github.com/chihyang/CPP_Primer
 
+https://github.com/pezy/CppPrimer#c-primer-5th-edition-exercise-answers
+
 https://github.com/huangmingchuan/Cpp_Primer_Answers
 
 https://github.com/iZhangHui/CppPrimer
