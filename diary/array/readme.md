@@ -41,20 +41,19 @@ myList[2] = 3.4;
 myList[3] = 3.5;
 
 使用陣列初始化器，必須在同一行敘述進行宣告與初始化的動作。
-將其分開會導致語法錯誤。比方說，以下這段敘述是錯的：
-  
+將其分開會導致語法錯誤。
  ```
  ```
 錯在那? Answer Me!
 double myList[4];
 myList = {1.9, 2.9, 3.4, 3.5};
 ```
+```
 當使用陣列初始化器來宣告與初始化時，C++ 允許您省略陣列大小。
 
 double myList[] = {1.9, 2.9, 3.4, 3.5};
 
 編譯器將自動計算陣列有多少個元素。
-
 ```
 
 ```
@@ -75,7 +74,7 @@ for (int i = 0; i < ARRAY_SIZE; i++)
 }
 利用 0 到 99 的隨機數值，對陣列myList 進行初始化動作
 ```
-```
+
 ```
 #include <iostream>
 using namespace std;
@@ -107,71 +106,169 @@ int main()
 }
 ```
 
-### 宣告及初始化陣列
+### 陣列元素的存取
+
+```
+陣列元素可透過索引做存取。
+陣列索引是以 0 為基底；也就是說其範圍介於 0 到 arraySize-1 之間。
+陣列大小的宣示式是用來指明陣列的元素個數。
+
+double myList[10];
+==>myList 儲存 10 個 double 值，索引範圍從 0 到 9。
+
+陣列元素：
+arrayName[index];
+
+比方說，myList[9] 表示陣列 myList 的最後一個元素。
 
 
+使用索引存取陣列元素時，若超出其範圍（如 myList[-1]與 myList[10]）都會發生超出範圍的錯誤。
+此錯誤是相當嚴重的。不幸的是，C++ 不會告知，因此要非常小心確認索引在有效的範圍內。
 
 ```
 
+### 陣列常用技術:
+
+###### 印出陣列
 ```
-
-
-
-
+for (int i = 0; i < ARRAY_SIZE; i++) 
+{
+  cout << myList[i] << " ";
+}
 ```
-
-```
-
-
-
-
-```
+###### 拷貝陣列
 
 ```
-
-
-
-
-```
+for (int i = 0; i < ARRAY_SIZE; i++) 
+{
+  list[i] = myList[i]; 
+}
 
 ```
 
-
+###### 加總陣列的所有元素
+```
+double total = 0;
+for (int i = 0; i < ARRAY_SIZE; i++) 
+{
+  total += myList[i];
+}
 
 ```
 
-```
-
-
+###### 找出最大元素
 
 ```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-```
+double max = myList[0];
+for (int i = 1; i < ARRAY_SIZE; i++) 
+{
+  if (myList[i] > max) max = myList[i];
+}
 
 ```
 
 
+###### 找出最大元素的最小索引(如果有多個相同最大元素)
+
+```
+double max = myList[0];
+int indexOfMax = 0;
+for (int i = 1; i < ARRAY_SIZE; i++) 
+{
+  if (myList[i] > max) 
+  {
+    max = myList[i];
+    indexOfMax = i;
+  }
+}
+
+
+```
+
+###### 隨機洗牌
+
+```
+srand(time(0));
+for (int i = 0; i < ARRAY_SIZE; i++) 
+{
+  // Generate an index randomly
+  int index = rand() % ARRAY_SIZE;
+  double temp = myList[i];
+  myList[i] = myList[index]; 
+  myList[index] = temp;
+}
+
+```
+
+###### 移動元素
+
+```
+double temp = myList[0]; 
+
+for (int i = 1; i < myList.length; i++) 
+{
+  myList[i - 1] = myList[i];
+}
+
+myList[myList.length - 1] = temp;
+
+```
+
+### 包牌
+
+```
+Pick-10 樂透票上有 10 個 1 到 99 之間的唯一數字。
+
+假設我們買了很多張，想讓它們涵蓋 1 到 99 之間的所有數字。
+請撰寫一程式，從檔案讀取票上號碼，接著檢視是否涵蓋所有數字。
+
+假設檔案裡的最後一個數字為 0。
+
+```
+
+
+```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  bool isCovered[99];
+  int number; // number read from a file
+
+  // Initialize the array
+  for (int i = 0; i < 99; i++)
+    isCovered[i] = false;
+
+  // Read each number and mark its corresponding element covered
+  cin >> number;
+  while (number != 0)
+  {
+    isCovered[number - 1] = true;
+    cin >> number;
+  }
+
+  // Check if all covered
+  bool allCovered = true; // Assume all covered initially
+  for (int i = 0; i < 99; i++)
+    if (!isCovered[i]) 
+    {
+       allCovered = false; // Find one number not covered
+       break;
+    }
+
+  // Display result
+  if (allCovered)
+    cout << "The tickets cover all numbers" << endl;
+  else
+    cout << "The tickets don't cover all numbers" << endl;
+
+  return 0;
+}
+
+```
+
+執行
 
 ```
 
