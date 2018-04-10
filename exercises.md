@@ -37,7 +37,7 @@ int main()
 
 ```
 
-![result](pic/ex1.png)
+![result](./pic/ex1.png)
 ###### exercise1
 
 ```
