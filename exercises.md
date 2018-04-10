@@ -1,6 +1,11 @@
 
 ###### exercise1
 ```
+把一個陣列全部都平方
+改自教科書範例
+```
+
+```
 #include <iostream>
 using namespace std;
 
@@ -33,6 +38,12 @@ int main()
   system("pause"); 
   return 0;
 }
+
+
+```
+```
+說明:
+numbers_squared[i]=numbers[i]*numbers[i];
 
 
 ```
