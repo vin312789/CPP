@@ -50,7 +50,28 @@ int S(int x,int n)
     return x;  
 }
 ```
+### 
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i=0,j=0;					
+	char a[100],b[50];					
+	cout <<"please input string1:" << endl;
+	cin >> a;					
+	cout  << "please input string2:" << endl;
+	cin >> b;				
+	while(a[i]!='\0')			
+		i++;
+	while(b[j]!='\0')				
+		a[i++]=b[j++];			
+		a[i]='\0';				
+	cout << a << endl;			
+    return 0;
+}
 
+```
 ### ex.string_array_1:
 ```
 #include<iostream>
