@@ -24,7 +24,7 @@ https://github.com/
 
 王冠復 https://github.com/4040020/CPP
 
-吳維德 https://github.com/4060E049/student/cpp
+吳維德 https://github.com/4060E049/student
 
 徐昱洋 https://github.com/4060E042/-
 
@@ -92,19 +92,19 @@ https://github.com/
 
 陳玥臻 https://github.com/keaidigou/exercise
 
-https://github.com/
+吳明憬 https://github.com/jason98563884/-
 
-https://github.com/
+蘇允廷 https://github.com/4060E037/homework
 
-https://github.com/
+史奕翔 https://github.com/lin5555577/4060E029
 
-https://github.com/
+林浚安https://github.com/a22142233/c
 
-https://github.com/
+陳廣學https://github.com/4060e018/4060e018
 
-https://github.com/
+黃柏凱https://github.com/4060E041/homework
 
-https://github.com/
+https://github.com/4060E043/4060E043
 
 https://github.com/
 
