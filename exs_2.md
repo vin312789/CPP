@@ -39,6 +39,44 @@ int main()
 
 ```
 
+### ex.string_array_2:
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	char array[12]={'H','E','L','L','O',' ','W','O','R','L','D'};
+	for(i=0;i<12;i++)
+		cout<<array[i];
+	cout << endl;
+    return 0;
+}
+
+```
+
+
+### ex.string_array_3:
+```
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	char str1[30],str2[20];
+	cout<<"please input string1:"<< endl;
+	gets(str1);
+	cout<<"please input string2:"<<endl;
+	gets(str2);
+//	strcat(str1,str2);
+	cout <<"Now the string1 is:"<<endl;
+	puts(str1);
+    return 0;
+}
+```
+
+
+
 ### ex.array_1:
 ```
 
@@ -49,8 +87,6 @@ int main()
 ```
 
 ```
-
-
 ### ex.array_2d_1:(2018.4.17)
 ```
 #include <iostream>
