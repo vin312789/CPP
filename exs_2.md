@@ -22,8 +22,20 @@ int main()
 }
 ```
 
-### ex.array_1:
+### ex.string_array_1:
 ```
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	char array[12];
+	array[0]='a';
+	array[1]='b';
+	array[2]='b';
+	printf("%s\n",array);
+    return 0;
+}
 
 ```
 
