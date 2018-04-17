@@ -51,7 +51,7 @@ numbers_squared[i]=numbers[i]*numbers[i];
 
 ![result](PIC/EX1.png)
 
-###### exercise2:程式閱讀題
+### exercise2:程式閱讀題
 
 ```
 #include <iostream>
@@ -82,7 +82,7 @@ int S(int x,int n)
 }
 
 ```
-###### exercise3:矩陣相加與矩陣相乘
+### exercise3:矩陣相加與矩陣相乘
 
 
 
