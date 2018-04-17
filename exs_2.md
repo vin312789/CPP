@@ -1,10 +1,10 @@
-# 程式閱讀題
+# 程式閱讀題(2018.4.17)
 ```
 執行並說明下列程式的功能
 
 ```
 
-### ex.array_1:
+### ex.array_1:(2018.4.17)
 ```
 #include <iostream>
 using namespace std;
@@ -39,7 +39,7 @@ int main()
 ```
 
 
-### ex.array_1:
+### ex.array_2d_1:(2018.4.17)
 ```
 #include <iostream>
 #include <iomanip>
