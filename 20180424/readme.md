@@ -98,6 +98,8 @@ linux編譯與執行:
 g++ Circle.h Circle.cpp TestCircleWithHeader.cpp -o myfirstOOCircle
 
 
+[dev-c++@Windows執行方式](pic/dev-c++編譯方式.png)
+
 # 封裝
 
 [範例說明:圓形物件與面積](https://github.com/MyDearGreatTeacher/CPP/blob/master/20180424/TestCircle.cpp)
