@@ -93,13 +93,94 @@ int main()
 }
 ```
 
-linux編譯與執行: 
-
-g++ Circle.h Circle.cpp TestCircleWithHeader.cpp -o myfirstOOCircle
-
+linux編譯與執行: g++ Circle.h Circle.cpp TestCircleWithHeader.cpp -o myfirstOOCircle
 
 [dev-c++@Windows執行方式](pic/dev-c++編譯方式.png)
 
-# 封裝
+# 9.8 inline function 與inline definition
 
-[範例說明:圓形物件與面積](https://github.com/MyDearGreatTeacher/CPP/blob/master/20180424/TestCircle.cpp)
+# 9.9 封裝: public vs private
+
+把屬性設為private[只有此類別物件可以存取]
+在定義public方法去存取此屬性
+
+定義:CircleWithPrivateDataFields.h
+```
+#ifndef CIRCLE_H
+#define CIRCLE_H
+
+class Circle
+{
+public:
+  Circle();
+  Circle(double);
+  double getArea();
+  double getRadius();
+  void setRadius(double); 
+
+private:
+  double radius;
+};
+
+#endif
+```
+
+實作:CircleWithPrivateDataFields.cpp
+```
+#include "CircleWithPrivateDataFields.h"
+
+// Construct a default circle object
+Circle::Circle()
+{
+  radius = 1;
+}
+
+// Construct a circle object
+Circle::Circle(double newRadius)
+{
+  radius = newRadius;
+}
+
+// Return the area of this circle
+double Circle::getArea()
+{
+  return radius * radius * 3.14159;
+}
+
+// Return the radius of this circle
+double Circle::getRadius()
+{
+  return radius;
+}
+
+// Set a new radius
+void Circle::setRadius(double newRadius)
+{
+  radius = (newRadius >= 0) ? newRadius : 0;
+}
+```
+主執行程式:
+```
+#include <iostream>
+#include "CircleWithPrivateDataFields.h"
+using namespace std;
+
+int main()
+{
+  Circle circle1;
+  Circle circle2(5.0);
+
+  cout << "The area of the circle of radius "
+    << circle1.getRadius() << " is " << circle1.getArea() << endl;
+  cout << "The area of the circle of radius "
+    << circle2.getRadius() << " is " << circle2.getArea() << endl;
+
+  // Modify circle radius
+  circle2.setRadius(100);
+  cout << "The area of the circle of radius "
+    << circle2.getRadius() << " is " << circle2.getArea() << endl;
+
+  return 0;
+}
+```
+
