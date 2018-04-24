@@ -16,6 +16,8 @@
 [4]main函式
 [4.1]用類別class建立三個物件
 [4.2]利用**物件.方法**及**物件.屬性**來執行運算
+物件.屬性==>circle2.radius
+物件.方法==>circle2.getArea()
 ```
 
 [作業:球物件與體積及表面積]Sphere, getVolume 體積, getArea表面積
