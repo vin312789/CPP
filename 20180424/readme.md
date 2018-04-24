@@ -93,6 +93,11 @@ int main()
 }
 ```
 
+linux編譯與執行: 
+
+g++ Circle.h Circle.cpp TestCircleWithHeader.cpp -o myfirstOOCircle
+
+
 # 封裝
 
 [範例說明:圓形物件與面積](https://github.com/MyDearGreatTeacher/CPP/blob/master/20180424/TestCircle.cpp)
