@@ -22,6 +22,8 @@
 
 [作業:球物件與體積及表面積]Sphere, getVolume 體積, getArea表面積
 
+# 使用[UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language)表達你的程式設計
+
 # 實作與定義分離(教科書9.6)
 
 定義:Circle.h
