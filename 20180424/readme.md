@@ -11,7 +11,7 @@
 類別class包括
 [3.1]屬性attribute:
 [3.2]建構子(CONSTRUCTOR):兩個(含預設建構子DEFAULT)
-[3.3]方法9METHOD/FUNCTION):
+[3.3]方法(METHOD/FUNCTION):
 
 [4]main函式
 [4.1]用類別class建立三個物件
