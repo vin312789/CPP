@@ -102,7 +102,8 @@ linux編譯與執行: g++ Circle.h Circle.cpp TestCircleWithHeader.cpp -o myfirs
 # 9.9 封裝: public vs private
 
 把屬性設為private[只有此類別物件可以存取]
-在定義public方法去存取此屬性
+
+再定義public方法去存取此屬性
 
 定義:CircleWithPrivateDataFields.h
 ```
