@@ -24,7 +24,7 @@
 
 # 使用[UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language)表達你的程式設計
 
-(pic/class.png)
+[類別](pic/class.png)
 
 # 實作與定義分離(教科書9.6)
 
