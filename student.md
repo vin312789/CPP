@@ -31,7 +31,7 @@
 
 江泰融 https://github.com/4060E060/operaion/
 
-王映傑 https://github.com/4060eo31/c-/
+王映傑 https://github.com/4060eo31/
 
 林淯淜 https://github.com/4060E006/homework
 
