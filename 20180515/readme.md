@@ -4,6 +4,8 @@
 
 >* http://www.cplusplus.com/reference/string/string/
 
+>* https://www.geeksforgeeks.org/c-string-class-and-its-applications/
+
 # cpp  string類別(class)的方法:
 
 >* length()
