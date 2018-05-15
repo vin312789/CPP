@@ -145,6 +145,8 @@ int main()
 
 # 類別(class)設計:BMI類別的設計 ==>see 教科書ch10.7
 
+>* [BMI](https://zh.wikipedia.org/wiki/%E8%BA%AB%E9%AB%98%E9%AB%94%E9%87%8D%E6%8C%87%E6%95%B8)
+
 >* 作業:完成教科書範例程式說明
 
 [1]BMI類別的定義 ==> BMI.h
