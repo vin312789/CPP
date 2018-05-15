@@ -10,6 +10,7 @@
 
 # cpp  string類別(class)的方法:
 
+>* 參考教科書 ch10.2
 >* length()
 >* size()
 >* at(2)
