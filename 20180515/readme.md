@@ -6,6 +6,8 @@
 
 >* https://www.geeksforgeeks.org/c-string-class-and-its-applications/
 
+
+
 # cpp  string類別(class)的方法:
 
 >* length()
@@ -17,6 +19,8 @@
 >* end()
 >* replace()
 >* find()
+
+# cpp程式碼說明  string類別(class)的各種建構子的使用及方法的使用
 
 ```
 // C++ program to demonstrate various function string class
