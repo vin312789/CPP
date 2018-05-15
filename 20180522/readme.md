@@ -57,12 +57,96 @@ GenericType maxValue(
 
 # class template類別樣版:ch10.9 vs ch12.4
 
-### ch10.9
+### ch10.9 整數類型的stack
+
+>* [1]定義 ==> StackOfIntegers.h
+>* [2]實作==> StackOfIntegers.cpp
+>* [3]使用==> TestStackOfIntegers.cpp
+
+[1]定義 ==> StackOfIntegers.h
+```
+#ifndef STACK_H
+#define STACK_H
+
+class StackOfIntegers
+{
+public:
+  StackOfIntegers();
+  bool isEmpty() const;
+  int peek() const;
+  void push(int value);
+  int pop();
+  int getSize() const;
+
+private:
+  int elements[100];
+  int size;
+};
+
+#endif
+```
+
+[2]實作==> StackOfIntegers.cpp
+```
+#include "StackOfIntegers.h"
+
+StackOfIntegers::StackOfIntegers()
+{
+  size = 0;
+}
+
+bool StackOfIntegers::isEmpty() const
+{
+  return (size == 0);
+}
+
+int StackOfIntegers::peek() const
+{
+  return elements[size - 1];
+}
+
+void StackOfIntegers::push(int value)
+{
+  elements[size++] = value;
+}
+
+int StackOfIntegers::pop()
+{
+  return elements[--size];
+}
+
+int StackOfIntegers::getSize() const
+{
+  return size;
+}
+```
+
+[3]使用==>TestStackOfIntegers.cpp
+```
+#include <iostream>
+#include "StackOfIntegers.h"
+using namespace std;
+
+int main()
+{
+  StackOfIntegers stack;
+
+  for (int i = 0; i < 10; i++)
+    stack.push(i);
+
+  while (!stack.isEmpty())
+    cout << stack.pop() << " ";
+
+  return 0;
+}
+```
+
+Question:請撰寫浮點數的stack
 
 ### ch12.4 ==> class template類別樣版
 
 >* [1]定義+實作 ==> GenericStack.h
->* [2]使用==> BMI.cpp
+>* [2]使用==>TestGenericStack.cpp
 
 
 [1]定義+實作 ==> GenericStack.h
@@ -124,22 +208,34 @@ int Stack<T>::getSize() const
 
 #endif
 ```
+[2]使用==>TestGenericStack.cpp
 
-使用==>TestStackOfIntegers.cpp
 ```
 #include <iostream>
-#include "StackOfIntegers.h"
+#include <string>
+#include "GenericStack.h"
 using namespace std;
 
 int main()
 {
-  StackOfIntegers stack;
-
+  // Create a stack of int values
+  Stack<int> intStack;
   for (int i = 0; i < 10; i++)
-    stack.push(i);
+    intStack.push(i);
 
-  while (!stack.isEmpty())
-    cout << stack.pop() << " ";
+  while (!intStack.empty())
+    cout << intStack.pop() << " ";
+  cout << endl;
+
+  // Create a stack of strings
+  Stack<string> stringStack;
+  stringStack.push("Chicago");
+  stringStack.push("Denver");
+  stringStack.push("London");
+
+  while (!stringStack.empty())
+    cout << stringStack.pop() << " ";
+  cout << endl;
 
   return 0;
 }
