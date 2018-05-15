@@ -20,7 +20,11 @@
 >* replace()
 >* find()
 
-# cpp程式碼說明  string類別(class)的各種建構子的使用及方法的使用
+# cpp程式碼說明  
+
+### string類別(class)的各種建構子的使用
+
+### string類別(class)的方法的使用
 
 ```
 // C++ program to demonstrate various function string class
