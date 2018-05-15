@@ -45,7 +45,7 @@ int main()
 	string str3(5, '#');
 
 	// initialization by part of another string
-	string str4(str1, 6, 6); // from 6th index (second parameter)
+	string str4(str1, 6, 4); // from 6th index (second parameter)
 							// 6 characters (third parameter)
 
 	// initialization by part of another string : iteartor version
