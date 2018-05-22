@@ -210,17 +210,18 @@ using namespace std;
 
 int main()
 {
-  fstream inout;
+  //使用fstream 類別
+  fstream inout;
 
-  // Create a file
-  inout.open("city.txt", ios::out);
+  // Create a file==>檔案模式 ios::out參看課本說明
+  inout.open("city.txt", ios::out);
 
   // Write cities
   inout << "Dallas" << " " << "Houston" << " " << "Atlanta" << " ";
 
   inout.close();
 
-  // Append to the file
+  // Append to the file==>檔案模式 ios::app參看課本說明
   inout.open("city.txt", ios::out | ios::app);
 
   // Write cities
