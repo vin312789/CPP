@@ -68,19 +68,19 @@ GenericType maxValue(
 #ifndef STACK_H
 #define STACK_H
 
-class StackOfIntegers
+class StackOfIntegers  //類別名稱
 {
-public:
-  StackOfIntegers();
-  bool isEmpty() const;
-  int peek() const;
-  void push(int value);
-  int pop();
-  int getSize() const;
+public:  //公開的::可以被存取
+  StackOfIntegers();//建構子
+  bool isEmpty() const;//()測試是否為空的函數
+  int peek() const;//取出最上面元素的函數
+  void push(int value);//把資料丟入的函數
+  int pop();//取出最上層資料的函數
+  int getSize() const;//取得堆疊的大小的函數
 
-private:
-  int elements[100];
-  int size;
+private://私有的 1.把資料隱藏起來 2.使用上述的公開函數來存取
+  int elements[100];//整數類型的元素 大小為一百
+  int size;//整數類型的大小
 };
 
 #endif
@@ -90,17 +90,17 @@ private:
 ```
 #include "StackOfIntegers.h"
 
-StackOfIntegers::StackOfIntegers()
+StackOfIntegers::StackOfIntegers()//類別的建構子的實作
 {
-  size = 0;
+  size = 0;//產生大小為零的StackOfIntegers物件
 }
 
-bool StackOfIntegers::isEmpty() const
-{
-  return (size == 0);
+bool StackOfIntegers::isEmpty() const //測試是否為空的實作
+{//此函數執行後回傳的值為布林，真或假
+  return (size == 0);//()判斷式size == 0 若大小為零則回傳假；若大小不為零則回傳真
 }
 
-int StackOfIntegers::peek() const
+int StackOfIntegers::peek() const //取出最上層資料的實作
 {
   return elements[size - 1];
 }
