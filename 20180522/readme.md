@@ -108,11 +108,15 @@ int StackOfIntegers::peek() const //取出最上層資料的實作
 void StackOfIntegers::push(int value)
 {
   elements[size++] = value;
+  //elements[size] = value;
+  //size++
 }
 
 int StackOfIntegers::pop()
 {
   return elements[--size];
+  // --size
+  //  return elements[size];
 }
 
 int StackOfIntegers::getSize() const
